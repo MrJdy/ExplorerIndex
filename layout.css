@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding:0;  
+}
+.container {
+  width: 100%;
+  padding-left: 5.5%;
+  padding-top: 3%;
+  box-sizing: border-box;
+  display:flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+body{
+    color: rgba(255,255,255,0.65);
+    background-color: #24292e;
+    background-image: url(./images/star-bg.svg),linear-gradient(#191c20, #24292e 15%);
+    background-repeat: repeat-x;
+    background-position: center 0, 0 0, 0 0;
+}
+article a{
+  width: 120px;
+  height: 170px;
+  /* border: 1px solid gray; */
+  border-radius: 15px;
+  text-decoration: none;
+  color: aliceblue;
+  position: relative;
+  margin: 5%;
+  cursor: pointer;
+  overflow: hidden;
+  background:rgba(0,0,0,0);
+  transition: all .3s ease-in-out;
+}
+article a:hover{
+  transform: translate(0,-5px);
+}
+img{
+  width: 120px;
+  height: 120px;
+  margin-top: 0px;
+}
+
+article a .title{
+  font-family: '微软雅黑';
+  font-size: 1.2em;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%,0);
+}
+
+
