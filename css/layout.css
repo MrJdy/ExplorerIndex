@@ -16,7 +16,7 @@ body {
   position: absolute;
   left: 50%;
   top: 25%;
-  transform: translate(-50%, 0);
+  transform: translate(-52.5%, 0);
   box-sizing: border-box;
   display: flex;
   justify-content: flex-start;
@@ -30,7 +30,7 @@ body {
   height: 185px;
   display: block;
   list-style: none;
-  margin-left: 9.5%;
+  margin-left: 8.5%;
   margin-top: 5%;
   cursor: pointer;
   overflow: hidden;
