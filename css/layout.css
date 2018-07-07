@@ -12,28 +12,25 @@ body {
 }
 
 .container {
-  width: 72vw;
+  width: 80vw;
   position: absolute;
   left: 50%;
   top: 25%;
-  transform: translate(-52.5%, 0);
+  transform: translate(-50%, 0);
   box-sizing: border-box;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  /* overflow: hidden; */
   box-sizing: border-box;
 }
 
 .container li {
-  width: 120px;
-  height: 185px;
+  width: 15vw;
+  height: 13vw;
   display: block;
   list-style: none;
-  margin-left: 8.5%;
   margin-top: 5%;
   cursor: pointer;
-  overflow: hidden;
   transition: all .3s ease-in-out;
   background: rgba(0, 0, 0, 0);
   box-sizing: border-box;
@@ -43,34 +40,31 @@ body {
   transform: translate(0, -5px);
 }
 
-.container .cover {
-  opacity: 0.2;
-}
-
 .container li a {
   text-decoration: none;
   color: aliceblue;
 }
 
 .container li a .block {
-  width: 120px;
-  height: 120px;
+  width: 15vw;
+  height: 8vw;
   margin-top: 0px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0);
+  text-align: center;
 }
 
 .container li a p img {
-  width: 120px;
-  height: 120px;
+  width: 8vw;
+  height: 8vw;
   margin-top: 0px;
 }
 
 .container li a .title {
   font-family: '微软雅黑';
-  font-size: 1.2em;
+  font-size: 1.3vw;
   text-align: center;
-  transform: translate(0, 95%);
+  margin-top: 1vw;
 }
 
 .search_container {
@@ -78,48 +72,14 @@ body {
   height: 37px;
   width: 42vw;
   background: #fff;
-  padding-right: 5vw;
   border-radius: 3px;
   box-sizing: border-box;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, .12);
-  transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
   overflow: hidden;
   position: absolute;
   top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-.search_container:hover {
-  box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
-}
-
-.search_ {
-  box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
-}
-
-.search_container>a {
-  display: block;
-  width: 5vw;
-  line-height: 37px;
-  border-radius: 3px;
-  position: relative;
-  float: right;
-  margin-right: -5vw;
-  background: #f8f8f8;
-  text-align: center;
-  font-size: 1.2em;
-  font-family: '微软雅黑';
-  color: #858888;
-  text-decoration: none;
-  cursor: pointer;
-  transition: 0.3s ease-in;
-}
-
-.search_container>a:hover {
-  background: #e5e5e5;
-}
-
 #search_text {
   display: block;
   width: 35.5vw;
