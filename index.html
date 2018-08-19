@@ -21,27 +21,35 @@
       </a>
     </li>
     <li draggable="true">
-      <a href="http://naotu.baidu.com/" target="_blank">
+      <a href="http://www.mrjdy.tech/" target="_blank">
+        <p class="block block_9">
+          <img src="./images/myBlog.jpg" alt="牛客网" title="牛客网" draggable="false">
+        </p>
+        <p class="title">我的博客</p>
+      </a>
+    </li>
+    <li draggable="true">
+      <a href="https://translate.google.com.hk/?hl=zh-CN&tab=wT" target="_blank">
         <p class="block block_4">
-          <img src="./images/naotu.png" alt="脑图" title="脑图" draggable="false">
+          <img src="./images/google.png" alt="脑图" title="脑图" draggable="false">
         </p>
-        <p class="title">脑图</p>
+        <p class="title">Google 翻译</p>
       </a>
     </li>
     <li draggable="true">
-      <a href="https://www.weiyun.com" target="_blank">
-        <p class="block block_5">
-          <img src="./images/weiyun.png" alt="微云" title="微云" draggable="false">
+      <a href="https://gitee.com/" target="_blank">
+        <p class="block block_10">
+          <img src="./images/mayun.jpeg" alt="CSDN" title="CSDN" draggable="false">
         </p>
-        <p class="title">微云</p>
+        <p class="title">码云</p>
       </a>
     </li>
     <li draggable="true">
-      <a href="https://juejin.im/timeline" target="_blank">
-        <p class="block block_2">
-          <img src="./images/juejin.png" alt="掘金" title="掘金" draggable="false">
+      <a href="https://cn.vuejs.org/" target="_blank">
+        <p class="block block_8">
+          <img src="./images/vue.png" alt="Vue" title="Vue" draggable="false">
         </p>
-        <p class="title">掘金</p>
+        <p class="title">Vue</p>
       </a>
     </li>
     <li draggable="true">
@@ -53,27 +61,27 @@
       </a>
     </li>
     <li draggable="true">
+      <a href="https://juejin.im/timeline" target="_blank">
+        <p class="block block_2">
+          <img src="./images/juejin.png" alt="掘金" title="掘金" draggable="false">
+        </p>
+        <p class="title">掘金</p>
+      </a>
+    </li>
+    <li draggable="true">
+      <a href="https://www.weiyun.com" target="_blank">
+        <p class="block block_5">
+          <img src="./images/weiyun.png" alt="微云" title="微云" draggable="false">
+        </p>
+        <p class="title">微云</p>
+      </a>
+    </li>
+    <li draggable="true">
       <a href="http://www.iconfont.cn/" target="_blank">
         <p class="block block_6">
           <img src="./images/iconfont.png" alt="iconfont" title="iconfont" draggable="false">
         </p>
         <p class="title">iconfont</p>
-      </a>
-    </li>
-    <li draggable="true">
-      <a href="https://www.nowcoder.com/activity/oj" target="_blank">
-        <p class="block block_9">
-          <img src="./images/niuke.png" alt="牛客网" title="牛客网" draggable="false">
-        </p>
-        <p class="title">牛客网</p>
-      </a>
-    </li>
-    <li draggable="true">
-      <a href="https://blog.csdn.net/sunxiaofre" target="_blank">
-        <p class="block block_10">
-          <img src="./images/csdn.png" alt="CSDN" title="CSDN" draggable="false">
-        </p>
-        <p class="title">CSDN</p>
       </a>
     </li>
     <li draggable="true">
@@ -84,20 +92,31 @@
         <p class="title">猴头客</p>
       </a>
     </li>
-    <li draggable="true">
-      <a href="https://cn.vuejs.org/" target="_blank">
-        <p class="block block_8">
-          <img src="./images/vue.png" alt="Vue" title="Vue" draggable="false">
-        </p>
-        <p class="title">Vue</p>
-      </a>
-    </li>
   </ul>
 
   <div id="search_container" class="search_container">
-    <input type="text" autofocus="autofocus" id="search_text" placeholder="百度搜索" />
+    <div id="select" class="select-wrapper">
+      <img id="select_img" src="./images/select.png" alt="">
+    </div>
+    <input type="text" autofocus="autofocus" class="search_text default" id="baidu" placeholder=" 百度" />
+    <input type="text" autofocus="autofocus" class="search_text" id="google" placeholder=" Google" />
+    <input type="text" autofocus="autofocus" class="search_text" id="qihu" placeholder=" 360搜索" />
+    <input type="text" autofocus="autofocus" class="search_text" id="sougou" placeholder=" 搜狗" />
+    <input type="text" autofocus="autofocus" class="search_text" id="bing" placeholder=" 必应" />
+    <input type="text" autofocus="autofocus" class="search_text" id="yahoo" placeholder=" 雅虎" />
+    
+    <ul id="dialog" class="dialog">
+      <li id="baidu_btn" class="list">百度</li>
+      <li id="google_btn" class="list">Google</li>
+      <li id="qihu_btn" class="list">360搜索</li>
+      <li id="sougou_btn" class="list">搜狗</li>
+      <li id="bing_btn" class="list">必应</li>
+      <li id="yahoo_btn" class="list">雅虎</li>
+    </ul>
   </div>
+
   <script src="js/search.js"></script>
   <script src="js/drag.js"></script>
 </body>
+
 </html>

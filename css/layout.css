@@ -49,7 +49,6 @@ body {
   width: 15vw;
   height: 8vw;
   margin-top: 0px;
-  border-radius: 50%;
   background: rgba(255, 255, 255, 0);
   text-align: center;
 }
@@ -57,6 +56,8 @@ body {
 .container li a p img {
   width: 8vw;
   height: 8vw;
+  border-radius: 50%;
+  overflow: hidden;
   margin-top: 0px;
 }
 
@@ -74,20 +75,58 @@ body {
   background: #fff;
   border-radius: 3px;
   box-sizing: border-box;
-  overflow: hidden;
   position: absolute;
   top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#search_text {
+.select-wrapper {
+  width: 30px;
+  height: 37px;
+  float: left;
+  overflow: hidden;
+  cursor: pointer;
+}
+#select_img {
+  display: block;
+  height: 12px;
+  margin: 13px 5px;
+  transition: all .3s;
+}
+.dialog {
+  float: left;
+  width: 42vw;
+  height: 50px;
+  background: #fff;
+  border-radius: 3px;
+  margin-top: 3px;
+  display: none;
+  transition: all .3s;
+}
+.dialog .list {
+  list-style: none;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  font-family: '微软雅黑';
+  float: left;
+  color: #333333;
+  margin-left: 30px;
+  cursor: pointer;
+}
+.search_text {
   display: block;
   width: 35.5vw;
   height: 27px;
-  padding: 5px 10px;
+  padding: 5px 0;
   border: none;
   font-size: 16px;
   outline: none;
   position: relative;
   float: left;
+  caret-color:#000000;
+  display: none;
+}
+.default {
+  display: block;
 }
