@@ -82,37 +82,31 @@ window.onload = function () {
   google.onkeyup = function (ev) {
     if (ev.keyCode === 13) {
       window.open('https://www.google.com/search?q=' + this.value + '&' + new Date().getTime(), '_blank');
-      this.value = '';
     }
   }
   baidu.onkeyup = function (ev) {
     if (ev.keyCode === 13) {
       window.open('https://www.baidu.com/s?wd=' + this.value + '&' + new Date().getTime(), '_blank');
-      this.value = '';
     }
   }
   qihu.onkeyup = function (ev) {
     if (ev.keyCode === 13) {
       window.open('https://www.so.com/s?q=' + this.value + '&' + new Date().getTime(), '_blank');
-      this.value = '';
     }
   }
   sougou.onkeyup = function (ev) {
     if (ev.keyCode === 13) {
       window.open('https://www.sogou.com/sogou?query=' + this.value + '&' + new Date().getTime(), '_blank');
-      this.value = '';
     }
   }
   bing.onkeyup = function (ev) {
     if (ev.keyCode === 13) {
       window.open('https://cn.bing.com/search?q=' + this.value + '&' + new Date().getTime(), '_blank');
-      this.value = '';
     }
   }
   yahoo.onkeyup = function (ev) {
     if (ev.keyCode === 13) {
       window.open('https://search.yahoo.com/search?q=' + this.value + '&' + new Date().getTime(), '_blank');
-      this.value = '';
     }
   }
 }
