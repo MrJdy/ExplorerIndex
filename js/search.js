@@ -12,9 +12,8 @@ window.onload = function () {
   var bing_btn = document.getElementById('bing_btn');
   var yahoo = document.getElementById('yahoo');
   var yahoo_btn = document.getElementById('yahoo_btn');
-  var select = document.getElementById('select');
-  var select = document.getElementById('select');
   var dialog = document.getElementById('dialog');
+  var searchValue = '';
   select.addEventListener('click', (e) => {
     if (door) {
       select_img.style.transform = 'rotateX(' + 180 + 'deg)';
@@ -37,6 +36,7 @@ window.onload = function () {
     sougou.style.display = 'none';
     bing.style.display = 'none';
     yahoo.style.display = 'none';
+    baidu.value = searchValue;
 
   });
   google_btn.addEventListener('click', () => {
@@ -46,6 +46,7 @@ window.onload = function () {
     sougou.style.display = 'none';
     bing.style.display = 'none';
     yahoo.style.display = 'none';
+    google.value = searchValue;
   });
   qihu_btn.addEventListener('click', () => {
     baidu.style.display = 'none';
@@ -54,6 +55,7 @@ window.onload = function () {
     sougou.style.display = 'none';
     bing.style.display = 'none';
     yahoo.style.display = 'none';
+    qihu.value = searchValue;
   });
   sougou_btn.addEventListener('click', () => {
     baidu.style.display = 'none';
@@ -62,6 +64,7 @@ window.onload = function () {
     sougou.style.display = 'block';
     bing.style.display = 'none';
     yahoo.style.display = 'none';
+    sougou.value = searchValue;
   });
   bing_btn.addEventListener('click', () => {
     baidu.style.display = 'none';
@@ -70,6 +73,7 @@ window.onload = function () {
     sougou.style.display = 'none';
     bing.style.display = 'block';
     yahoo.style.display = 'none';
+    bing.value = searchValue;
   });
   yahoo_btn.addEventListener('click', () => {
     baidu.style.display = 'none';
@@ -78,35 +82,42 @@ window.onload = function () {
     sougou.style.display = 'none';
     bing.style.display = 'none';
     yahoo.style.display = 'block';
+    yahoo.value = searchValue;
   });
   google.onkeyup = function (ev) {
     if (ev.keyCode === 13) {
       window.open('https://www.google.com/search?q=' + this.value + '&' + new Date().getTime(), '_blank');
     }
+    searchValue = google.value;
   }
   baidu.onkeyup = function (ev) {
     if (ev.keyCode === 13) {
       window.open('https://www.baidu.com/s?wd=' + this.value + '&' + new Date().getTime(), '_blank');
     }
+    searchValue = baidu.value;
   }
   qihu.onkeyup = function (ev) {
     if (ev.keyCode === 13) {
       window.open('https://www.so.com/s?q=' + this.value + '&' + new Date().getTime(), '_blank');
     }
+    searchValue = qihu.value;
   }
   sougou.onkeyup = function (ev) {
     if (ev.keyCode === 13) {
       window.open('https://www.sogou.com/sogou?query=' + this.value + '&' + new Date().getTime(), '_blank');
     }
+    searchValue = sougou.value;
   }
   bing.onkeyup = function (ev) {
     if (ev.keyCode === 13) {
       window.open('https://cn.bing.com/search?q=' + this.value + '&' + new Date().getTime(), '_blank');
     }
+    searchValue = bing.value;
   }
   yahoo.onkeyup = function (ev) {
     if (ev.keyCode === 13) {
       window.open('https://search.yahoo.com/search?q=' + this.value + '&' + new Date().getTime(), '_blank');
     }
+    searchValue = yahoo.value;
   }
 }
