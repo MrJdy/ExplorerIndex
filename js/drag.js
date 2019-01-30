@@ -1,16 +1,16 @@
 function handleDragStart(e) {
-  this.style.opacity = '.5';
+  this.style.opacity = ".5";
   dragSrcEl = this;
-  e.dataTransfer.effectAllowed = 'move';
-  e.dataTransfer.setData('text/html', this.innerHTML);
+  e.dataTransfer.effectAllowed = "move";
+  e.dataTransfer.setData("text/html", this.innerHTML);
 }
 
 function handleDragEnter(e) {
-  this.classList.add('over');
+  this.classList.add("over");
 }
 
 function handleDragLeave(e) {
-  this.classList.remove('over');
+  this.classList.remove("over");
 }
 
 function handleDragOver(e) {
@@ -23,24 +23,24 @@ function handleDragOver(e) {
 function handleDrop(e) {
   if (dragSrcEl != this) {
     dragSrcEl.innerHTML = this.innerHTML;
-    this.innerHTML = e.dataTransfer.getData('text/html');
+    this.innerHTML = e.dataTransfer.getData("text/html");
   }
   return false;
 }
 //拖拽完成后，作用在被拖拽元素上
 function handleDragEnd(e) {
-  this.style.opacity = '1';
-  [].forEach.call(li, function (d) {
-    d.classList.remove('over');
+  this.style.opacity = "1";
+  [].forEach.call(li, function(d) {
+    d.classList.remove("over");
   });
 }
-var ul = document.getElementById('list');
-var li = ul.getElementsByTagName('li');
-[].forEach.call(li, function (d) {
-  d.addEventListener('dragstart', handleDragStart, false);
-  d.addEventListener('dragenter', handleDragEnter, false);
-  d.addEventListener('dragover', handleDragOver, false);
-  d.addEventListener('dragleave', handleDragLeave, false);
-  d.addEventListener('drop', handleDrop, false);
-  d.addEventListener('dragend', handleDragEnd, false);
+var ul = document.getElementById("list");
+var li = ul.getElementsByTagName("li");
+[].forEach.call(li, function(d) {
+  d.addEventListener("dragstart", handleDragStart, false);
+  d.addEventListener("dragenter", handleDragEnter, false);
+  d.addEventListener("dragover", handleDragOver, false);
+  d.addEventListener("dragleave", handleDragLeave, false);
+  d.addEventListener("drop", handleDrop, false);
+  d.addEventListener("dragend", handleDragEnd, false);
 });
