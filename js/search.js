@@ -84,70 +84,19 @@ window.onload = function() {
     yahoo.style.display = "block";
     yahoo.value = searchValue;
   });
-  google.onkeyup = function(ev) {
-    if (ev.keyCode === 13) {
-      window.open(
-        "https://www.google.com/search?q=" +
-          this.value +
-          "&" +
-          new Date().getTime(),
-        "_blank"
-      );
-    }
-    searchValue = google.value;
-  };
-  baidu.onkeyup = function(ev) {
-    if (ev.keyCode === 13) {
-      window.open(
-        "https://www.baidu.com/s?wd=" + this.value + "&" + new Date().getTime(),
-        "_blank"
-      );
-    }
-    searchValue = baidu.value;
-  };
-  qihu.onkeyup = function(ev) {
-    if (ev.keyCode === 13) {
-      window.open(
-        "https://www.so.com/s?q=" + this.value + "&" + new Date().getTime(),
-        "_blank"
-      );
-    }
-    searchValue = qihu.value;
-  };
-  sougou.onkeyup = function(ev) {
-    if (ev.keyCode === 13) {
-      window.open(
-        "https://www.sogou.com/sogou?query=" +
-          this.value +
-          "&" +
-          new Date().getTime(),
-        "_blank"
-      );
-    }
-    searchValue = sougou.value;
-  };
-  bing.onkeyup = function(ev) {
-    if (ev.keyCode === 13) {
-      window.open(
-        "https://cn.bing.com/search?q=" +
-          this.value +
-          "&" +
-          new Date().getTime(),
-        "_blank"
-      );
-    }
-    searchValue = bing.value;
-  };
-  yahoo.onkeyup = function(ev) {
-    if (ev.keyCode === 13) {
-      window.open(
-        "https://search.yahoo.com/search?q=" +
-          this.value +
-          "&" +
-          new Date().getTime(),
-        "_blank"
-      );
-    }
-    searchValue = yahoo.value;
-  };
+  function search(name, api) {
+    name.onkeyup = function(ev) {
+      if (ev.keyCode === 13) {
+        window.open(`${api}${this.value}&${new Date().getTime()}`, "_blank");
+      }
+      searchValue = name.value;
+    };
+  }
+  search(google, "https://www.google.com/search?q=");
+  search(baidu, "https://www.baidu.com/s?wd=");
+  search(qihu, "https://www.so.com/s?q=");
+  search(sougou, "https://www.sogou.com/sogou?query=");
+  search(bing, "https://cn.bing.com/search?q=");
+  search(yahoo, "https://search.yahoo.com/search?q=");
+  search(google, "https://www.google.com/search?q=");
 };
