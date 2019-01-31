@@ -28,6 +28,7 @@ window.onload = function() {
   dialog.onclick = () => {
     select_img.style.transform = "rotate(" + 0 + "deg)";
     dialog.style.display = "none";
+    door = true;
   };
   baidu_btn.addEventListener("click", () => {
     baidu.style.display = "block";
