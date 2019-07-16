@@ -12,7 +12,6 @@ function handleDragEnter(e) {
 function handleDragLeave(e) {
   this.classList.remove("over");
 }
-
 function handleDragOver(e) {
   if (e.preventDefault) {
     e.preventDefault();
