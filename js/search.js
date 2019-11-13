@@ -60,7 +60,7 @@ window.onload = function() {
     sougou.style.display = "none";
     bing.style.display = "none";
     yahoo.style.display = "none";
-    google.value = searchValue;
+    magi.value = searchValue;
   });
   qihu_btn.addEventListener("click", () => {
     baidu.style.display = "none";
