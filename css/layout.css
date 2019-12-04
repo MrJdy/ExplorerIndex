@@ -38,7 +38,7 @@ body {
 }
 
 .container li:hover {
-  transform: translate(0, -5px);
+  transform: translate(0, -2px);
 }
 
 .container li a {
@@ -60,6 +60,13 @@ body {
   border-radius: 50%;
   overflow: hidden;
   margin-top: 0px;
+  transition: all 0.3s;
+}
+
+.container li a p img:active {
+  width: 5.6vw;
+  height: 5.6vw;
+  transition: all 0.3s;
 }
 
 .container li a .title {
