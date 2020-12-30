@@ -1,5 +1,6 @@
 window.onload = function() {
   var door = true;
+  var body = document.getElementsByTagName("body")[0];
   var google = document.getElementById("google");
   var google_btn = document.getElementById("google_btn");
   var magi = document.getElementById("magi");
@@ -16,7 +17,13 @@ window.onload = function() {
   var yahoo_btn = document.getElementById("yahoo_btn");
   var dialog = document.getElementById("dialog");
   var searchValue = "";
+  body.addEventListener("click", e => {
+    select_img.style.transform = "rotateX(" + 0 + "deg)";
+    dialog.style.display = "none";
+    door = true;
+  })
   select.addEventListener("click", e => {
+    e.stopPropagation();
     if (door) {
       select_img.style.transform = "rotateX(" + 180 + "deg)";
       dialog.style.display = "block";
