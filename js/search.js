@@ -121,18 +121,13 @@ window.onload = function() {
   }
   window.onblur = function() {//焦点离开
     document.title = "快回来";
-    if (nowSearch === "baidu") {
-      console.log(1);
-      window.open(`https://www.google.com/search?q=${this.value}&${new Date().getTime()}`, "_blank"); 
-      console.log(2);
-    }
   };
   window.focus = function() {
     document.title = "我的首页";
-//     if (nowSearch === "baidu") {
-//       nowSearch = "";
-//       window.open(`https://www.google.com/search?q=${this.value}&${new Date().getTime()}`, "_blank"); 
-//     }
+    if (nowSearch === "baidu") {
+      nowSearch = "";
+      window.open(`https://www.google.com/search?q=${this.value}&${new Date().getTime()}`, "_blank"); 
+    }
   };
   search(google, "https://www.google.com/search?q=");
   search(magi, "https://magi.com/search?q=");
