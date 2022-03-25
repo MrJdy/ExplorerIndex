@@ -112,7 +112,12 @@ window.onload = function() {
   function search(name, api) {
     name.onkeyup = function(ev) {
       if (ev.keyCode === 13) {
-        window.open(`${api}${this.value}&${new Date().getTime()}`, "_blank");
+        if (name === "baidu") {
+          window.open(`${api}${this.value}&${new Date().getTime()}`, "_blank");
+          window.open(`https://www.google.com/search?q=${this.value}&${new Date().getTime()}`, "_blank");
+        } else {
+          window.open(`${api}${this.value}&${new Date().getTime()}`, "_blank");
+        }
       }
       searchValue = name.value;
     };
