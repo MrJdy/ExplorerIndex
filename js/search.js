@@ -17,7 +17,7 @@ window.onload = function() {
   var yahoo_btn = document.getElementById("yahoo_btn");
   var dialog = document.getElementById("dialog");
   var searchValue = "";
-  var nowSearch = "";
+
   body.addEventListener("click", e => {
     select_img.style.transform = "rotateX(" + 0 + "deg)";
     dialog.style.display = "none";
@@ -111,7 +111,6 @@ window.onload = function() {
     yahoo.value = searchValue;
   });
   function search(name, api) {
-    nowSearch = api;
     name.onkeyup = function(ev) {
       if (ev.keyCode === 13) {
         window.open(`${api}${this.value}&${new Date().getTime()}`, "_blank");
@@ -119,19 +118,11 @@ window.onload = function() {
       searchValue = name.value;
     };
   }
-  window.onblur = function() {//焦点离开
+  window.onblur = function() {
     document.title = "快回来";
-    if (nowSearch.indexOf("baidu") >= 0) {
-      nowSearch = "";
-      window.open(`https://www.google.com/search?q=${this.value}&${new Date().getTime()}`, "_blank"); 
-    }
   };
   window.onfocus = function() {
     document.title = "我的首页";
-//     if (nowSearch === "baidu") {
-//       nowSearch = "";
-//       window.open(`https://www.google.com/search?q=${this.value}&${new Date().getTime()}`, "_blank"); 
-//     }
   };
   search(google, "https://www.google.com/search?q=");
   search(magi, "https://magi.com/search?q=");
