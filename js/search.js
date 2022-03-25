@@ -111,7 +111,7 @@ window.onload = function() {
     yahoo.value = searchValue;
   });
   function search(name, api) {
-    nowSearch = name;
+    nowSearch = api;
     name.onkeyup = function(ev) {
       if (ev.keyCode === 13) {
         window.open(`${api}${this.value}&${new Date().getTime()}`, "_blank");
@@ -121,13 +121,17 @@ window.onload = function() {
   }
   window.onblur = function() {//焦点离开
     document.title = "快回来";
-  };
-  window.focus = function() {
-    document.title = "我的首页";
-    if (nowSearch === "baidu") {
+    if (nowSearch.indexOf("baidu") >= 0) {
       nowSearch = "";
       window.open(`https://www.google.com/search?q=${this.value}&${new Date().getTime()}`, "_blank"); 
     }
+  };
+  window.onfocus = function() {
+    document.title = "我的首页";
+//     if (nowSearch === "baidu") {
+//       nowSearch = "";
+//       window.open(`https://www.google.com/search?q=${this.value}&${new Date().getTime()}`, "_blank"); 
+//     }
   };
   search(google, "https://www.google.com/search?q=");
   search(magi, "https://magi.com/search?q=");
